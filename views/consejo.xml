@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	
+	<data>
+			
+		<!--Accionador para el menu de Consejos-->
+		<record model="ir.actions.act_window" id="accion_lista_consejos">
+		    <field name="name">Consejos</field>
+			<field name="res_model">consejocomunal.consejo</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Registrar el primer Consejo Comunal</p>
+		    </field>
+		</record>
+		<!--Accionador para el menu de Consejos-->
+		
+		<record model="ir.ui.view" id="vista_formulario_consejos">
+			<field name="name">consejo.form</field>
+			<field name="model">consejocomunal.consejo</field>
+			<field name="arch" type="xml">
+				<form string="Formulario de Consejos">
+				    
+					<field name="municipio" colspan="2" />
+					<field name="parroquia" colspan="2"/>
+					<notebook colspan="4">
+						<page string="Seccion I">
+						  
+							<separator string="Identificacion Geografica" colspan="4"/>
+							<field name="fecha_r" colspan="2" nolabel="0"/>
+							<field name="nombre_emp" colspan="2" nolabel="0"/>
+							<field name="localidad" colspan="2" nolabel="0"/>
+							<field name="direccion" colspan="2" nolabel="0"/>
+						</page>
+						<page string="Seccion II">
+							<separator string="Área Organizativa del Consejo Comunal" colspan="4"/>
+							<field name="nombre_consejo" colspan="4" nolabel="0"/>
+							<separator string="Condiciones del Consejo Comunal:" colspan="4"/>
+							<field name="legalizacion" colspan="2" nolabel="0"/>
+							<field name="numero_reg" colspan="2" nolabel="0"/>
+							<field name="conformacion" colspan="2" nolabel="0"/>
+							<field name="conformacion_proceso" colspan="2" nolabel="0"/>
+							<field name="vocerias_vencidas" colspan="2" nolabel="0"/>
+							<field name="vocerias_vigentes" colspan="2" nolabel="0"/>
+							<field name="origen" colspan="2" nolabel="0"/>
+							<field name="integracion_batalla" colspan="2" nolabel="0"/>
+							<field name="comuna_construccion" colspan="2" nolabel="0"/>
+							<field name="reforma_consejos" colspan="2" nolabel="0"/>
+						</page>
+						<page string="Seccion III">
+							<separator string="Características Demográficas" colspan="4"/>
+							<field name="cantidad_hab" colspan="2" nolabel="0"/>
+							<field name="num_hombres" colspan="2" nolabel="0"/>
+							<field name="num_mujeres" colspan="2" nolabel="0"/>
+							<field name="num_familias" colspan="2" nolabel="0"/>
+							<field name="num_viviendas" colspan="2" nolabel="0"/>
+							<field name="num_ninos" colspan="2" nolabel="0"/>
+							<field name="num_ninas" colspan="2" nolabel="0"/>
+							<field name="num_adolescentes" colspan="2" nolabel="0"/>
+							<field name="num_adultos" colspan="2" nolabel="0"/>
+							<field name="num_adultos_mayores" colspan="2" nolabel="0"/>
+							<field name="num_pers_discapacidad" colspan="2" nolabel="0"/>
+							<field name="madres_solteras" colspan="2" nolabel="0"/>
+							<field name="num_madres_solteras" colspan="2" nolabel="0"/>
+							<field name="num_madres_solteras_des" colspan="2" nolabel="0"/>
+							<separator />
+							<label string="Nota: Los datos ingresados en los campos Hombres, Mujeres, Niños, Niñas y Adolescentes, no deben superar al número de habitantes del ámbito geográfico." colspan="4"/>
+						</page>
+						<page string="Sección IV">
+							<separator string="Características Educativas o Culturales" colspan="4"/>
+							<separator colspan="4"/>
+							<label string="1) El ámbito geográfico del Consejo Comunal se beneficia de las siguientes Misiones Educativas:" colspan="4"></label>
+							<separator colspan="4"/>
+							<field name="alma_mater" colspan="2" nolabel="0"/>
+							<field name="ribas" colspan="2" nolabel="0"/>
+							<field name="robinson" colspan="2" nolabel="0"/>
+							<field name="robinsonII" colspan="2" nolabel="0"/>
+							<field name="robinsonIII" colspan="2" nolabel="0"/>
+							<field name="sucre" colspan="2" nolabel="0"/>
+							<separator colspan="4"/>
+							<label string="Nota: Sólo seleccione si el ámbito geográfico del consejo comunal, se beneficia de las Misiones Educativas" colspan="4"></label>
+							<separator colspan="4"/><separator colspan="4"/>
+							<label string="2) Existe en Consejo Comunal las siguientes instituciones educativas" colspan="4"></label>
+							<separator colspan="4"/>
+							<field name="escuelas_bolivarianas" colspan="2" nolabel="0"/>
+							<field name="escuelas_bol_ope" colspan="2" nolabel="0"/>
+							<field name="simoncito" colspan="2" nolabel="0"/>
+							<field name="simoncito_ope" colspan="2" nolabel="0"/>
+							<field name="escuelas_oficiales" colspan="2" nolabel="0"/>
+							<field name="escuelas_ofi_ope" colspan="2" nolabel="0"/>
+							<field name="aldeas_univeritarias" colspan="2" nolabel="0"/>
+							<field name="aldeas_uni_ope" colspan="2" nolabel="0"/>
+							<field name="universidad_estatal" colspan="2" nolabel="0"/>
+							<field name="universidad_est_ope" colspan="2" nolabel="0"/>
+							<field name="universidad_privada" colspan="2" nolabel="0"/>
+							<field name="universidad_pri_ope" colspan="2" nolabel="0"/>
+							<field name="nucleos_universitario" colspan="2" nolabel="0"/>
+							<field name="nucleos_uni_ope" colspan="2" nolabel="0"/>
+							<field name="escuelas_robinson" colspan="2" nolabel="0"/>
+							<field name="escuelas_robin_ope" colspan="2" nolabel="0"/>
+							<field name="inces" colspan="2" nolabel="0"/>
+							<field name="inces_ope" colspan="2" nolabel="0"/>
+							<separator colspan="4"/>
+							<label string="Nota: Cuando la respuesta es Sí, debe indicar si está operativo o no" colspan="4"></label>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="3) En su opinión, ¿cuántas personas en edad escolar de su consejo comunal no saben leer ni escribir?" colspan="2"></label>
+							<field name="analfabetas" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="4) Desde su perspectiva ¿el Consejo Comunal conoce la Escuela del Poder Popular?" colspan="2"></label>
+							<field name="escue_poder_popular" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="5) Los voceros y voceras ¿participan activamente en el proceso formativo de la Escuela del Poder Popular?" colspan="2"></label>
+							<field name="participacion_voceros" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="6) ¿Cuántos participan?" colspan="2"></label>
+							<field name="cuantos_voceros_part" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="7) ¿Existe algún grupo Plan Revolucionario de Lectura?" colspan="2"></label>
+							<field name="plan_r_lectura" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="8) ¿Existen otros espacios de lectura?" colspan="2"></label>
+							<field name="otros_espacios" colspan="1" nolabel="1"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="9) De los siguientes temas, cuál es el más leído por el grupo revolucionario de lectura:" colspan="2"></label>
+							<field name="tema_mas_leido" colspan="1" nolabel="1" widget="selection"/>
+							<separator colspan="4"/>
+							<separator colspan="4"/>
+							<label string="10) En las actividades de distribución de libros por parte del Ministerio del Poder Popular para la Cultura. ¿Han recibido algún libro gratuito para las personas del ámbito geográfico del Consejo Comunal?" colspan="2"></label>
+							<field name="libros_gratuitos" colspan="1" nolabel="1"/>
+						</page>
+						<page string="Sección V">
+							<separator string="Características Económicas" colspan="4"/>
+							<separator colspan="4"/>
+							<label string="1) ¿Cuáles cree usted que son las tres ocupaciones u oficios predominantes que ejercen los miembros del Consejo Comunal?" colspan="4"></label>
+							<field name="ocupacion1" colspan="2" nolabel="0" widget="selection"/>
+							<field name="ocupacion2" colspan="2" nolabel="0" widget="selection"/>
+							<field name="ocupacion3" colspan="2" nolabel="0" widget="selection"/>
+							<separator colspan="4"/>							
+							<label string="2) En el ámbito geográfico del consejo comunal, ¿cuales cree ud. que son las tres potencialidades socioproductivas?" colspan="4"></label>
+							<field name="potencialidad1" colspan="2" nolabel="0" widget="selection"/>
+							<field name="potencialidad2" colspan="2" nolabel="0" widget="selection"/>
+							<field name="potencialidad3" colspan="2" nolabel="0" widget="selection"/>
+							<separator colspan="4"/>							
+							<separator colspan="4"/>							
+							<label string="3) ¿Cuántas personas mayores de 15 años que habitan en el ámbito geográfico del Consejo Comunal, se encuentran en situación de desocupados?" colspan="2"></label>
+							<field name="desocupados15" colspan="3" nolabel="1"/>							
+						</page>
+						<page string="Sección VI">
+							<separator string="Características de los Proyectos Comunitarios" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="1) En el último año en el ámbito geográfico del Consejo Comunal ¿ Se han realizado o realizan Proyectos Comunitarios?" colspan="2"/>
+							<field name="proyectos_ultimo_anyo" colspan="2" nolabel="1"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="2) ¿ Cuántos Proyectos?" colspan="2"/>
+							<field name="numero_proyectos" colspan="2" nolabel="1"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="3) ¿Cuántos son socio productivos?" colspan="2"/>
+							<field name="numero_proy_socioproduc" colspan="2" nolabel="1"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="4) ¿A cuál o cuáles actividades socioproductivas se dedican?" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<field name="agr_gan_caza_sil" colspan="2" nolabel="0"/>
+							<field name="pesca" colspan="2" nolabel="0"/>
+							<field name="minas" colspan="2" nolabel="0"/>
+							<field name="ind_manufactura" colspan="2" nolabel="0"/>
+							<field name="elect_gas_agua" colspan="2" nolabel="0"/>
+							<field name="construccion" colspan="2" nolabel="0"/>
+							<field name="comercio" colspan="2" nolabel="0"/>
+							<field name="rep_automotores" colspan="2" nolabel="0"/>
+							<field name="personal_enceres" colspan="2" nolabel="0"/>
+							<field name="hotel_res" colspan="2" nolabel="0"/>
+							<field name="trans_com" colspan="2" nolabel="0"/>
+							<field name="inmob_alquiler" colspan="2" nolabel="0"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="5) Situación actual de los proyectos comunitarios (Debe ingresar la cantidad de proyectos comunitarios Según la situación en que se encuentren)" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<field name="en_proyecto" colspan="2" nolabel="0"/>
+							<field name="en_ejecucion" colspan="2" nolabel="0"/>
+							<field name="ejecutado" colspan="2" nolabel="0"/>
+							<field name="en_tramite" colspan="2" nolabel="0"/>
+							<field name="en_elaboracion" colspan="2" nolabel="0"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="6) ¿Cuántos de esos proyectos comunitarios han recibido transferencia de recursos financieros?" colspan="2"/>
+							<field name="proyectos_recursos" colspan="2" nolabel="1"/>
+							<separator string="" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="7 Seleccione las tres (3) principales fuentes de financiamiento de esos proyectos:" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<field name="gobernacion" colspan="2" nolabel="0"/>
+							<field name="alcaldia" colspan="2" nolabel="0"/>
+							<field name="entes_priv" colspan="2" nolabel="0"/>
+							<field name="entes_est" colspan="2" nolabel="0"/>
+							<field name="ministerios" colspan="2" nolabel="0"/>
+							<field name="fondemi" colspan="2" nolabel="0"/>
+							<field name="safonacc" colspan="2" nolabel="0"/>
+							<field name="fundacomunal" colspan="2" nolabel="0"/>
+							<field name="otro_esp" colspan="2" nolabel="0"/>
+						</page>
+						<page string="Sección VII">
+							<separator string="Características de las Misiones Sociales" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<label string="1) Identifique las misiones sociales que existen y están operativas en su Consejo Comunal:" colspan="4"/>
+							<separator string="" colspan="4"/>
+							<field name="arbol" colspan="2" nolabel="0"/>
+							<field name="b_a_deportivo" colspan="2" nolabel="0"/>
+							<field name="b_adentro_I" colspan="2" nolabel="0"/>
+							<field name="b_adentro_II" colspan="2" nolabel="0"/>
+							<field name="b_adentro_II" colspan="2" nolabel="0"/>
+							<field name="ciencia" colspan="2" nolabel="0"/>
+							<field name="cristo" colspan="2" nolabel="0"/>
+							<field name="cultura" colspan="2" nolabel="0"/>
+							<field name="energetica" colspan="2" nolabel="0"/>
+							<field name="guaicaipuro" colspan="2" nolabel="0"/>
+							<field name="habitat" colspan="2" nolabel="0"/>
+							<field name="madres_b" colspan="2" nolabel="0"/>
+							<field name="mercal" colspan="2" nolabel="0"/>
+							<field name="milagro" colspan="2" nolabel="0"/>
+							<field name="miranda" colspan="2" nolabel="0"/>
+							<field name="musica" colspan="2" nolabel="0"/>
+							<field name="negra_hipolita" colspan="2" nolabel="0"/>
+							<field name="n_barrio" colspan="2" nolabel="0"/>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+		
+		<menuitem id="menu_principal_consejos" name="Consejos Comunales"/>
+		
+		<menuitem id="menu_secundario_consejos" name="Consejos Comunales" parent="menu_principal_consejos"/>
+		
+		<menuitem id="menu_consejo" name="Consejos" parent="menu_secundario_consejos" action="accion_lista_consejos"/>
+			
+	</data>
+	
+</openerp>
