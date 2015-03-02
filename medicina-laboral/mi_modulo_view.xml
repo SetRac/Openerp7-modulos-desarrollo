@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+    <record model="ir.ui.view" id="mi_modulo_mi_tabla_form">
+        <field name="name">mi_modulo.mi_tabla.form</field>
+            <field name="model">mi_modulo.mi_tabla</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Historia Medica del Paciente">
+		    <separator string="Historia Medica del Paciente"/>
+		    <newline/>
+		    <group  string="Datos del Paciente">
+		        <field name="fechadia"/>
+			<field name="name"/>
+		        <field name="cedula"/>
+		        <field name="edad"/>
+			<field name="edocivil"/>
+			<field name="direccion"/>
+			<field name="telefono"/>
+		        <field name="celular"/>
+
+			
+		    </group>
+		    <group string="Datos de la empresa">
+			<field name="empresa"/>
+		        <field name="aspiracargo"/>
+		        <field name="ocupacargo"/>
+		        <field name="fechaegreso"/>
+		    </group >
+		    
+		
+		    
+		    
+<!-- 		  Äbrir primer Notebook   -->
+                    <notebook colspan="4">
+                        <page string="Pre-Empleo">
+			    <!-- 		  Äbrir segundo Notebook   -->
+			    <notebook colspan="4">
+			        <page string="Antescedentes">
+				  <!-- 		  Äbrir tercer Notebook   -->
+				    <notebook colspan="4">
+					<page string="Antecedentes Familiares">
+					    <newline />
+					    <field name="papavive"/>
+					    <field name="mamavive"/>
+					    <field name="papacondicion"/>
+					    <field name="mamacondicion"/>
+					    <field name="nrohermanosvarones"/>
+					    <field name="nrohermanoshembras"/>
+					    <field name="hermanoscondicion"/>
+					    <field name="nrohijosvarones"/>
+					    <field name="nrohijoshembras"/>
+					    <field name="hijoscondicion"/>
+					   
+					    
+					</page>
+					<page string="Antecedentes Medicos">
+					    <group string="Antecedentes Medicos">
+			
+		                            
+						<newline />
+						<field name="eci"/>
+						<field name="lechina"/>
+						<field name="sarampion"/>
+						<field name="paperas"/>
+						<field name="rubiola"/>
+						<field name="dengue"/>
+						<field name="mononucleosis"/>
+						<field name="hepatitis"/>
+					        <field name="inmunizaciones"/>
+					        <field name="quirurgicos"/>
+					        <field name="quirurgicoscual"/>
+						<separator string="Solo Para Mujeres"/>
+					        <newline/>
+					        <field name="menarquia"/>
+					        <field name="fur"/>
+					        <field name="disminorrea"/>
+						<field name="mujeresotros"/>
+					        <field name="gestas"/>
+					        <field name="para"/>
+						<field name="cesarea"/>
+					        <field name="abortos"/>
+					        <field name="ultimacitologia"/>
+						<field name="patologia"/>
+					        <field name="secrecionotumaroacionsiono"/>
+					    </group >
+					    <group string="Uso de Medicamentos">
+			
+		                            
+					        <newline />
+					        <field name="medicamentos"/>
+					        <field name="medicamentoscuales"/>
+					        <field name="gastricos"/>
+					        <field name="respiratorios"/>
+						<field name="cardiovasculares"/>
+					        <field name="neurologicos"/>
+					        <field name="osteomuscular"/>
+					        <field name="orl"/>
+						<field name="urinarios"/>
+					        <field name="endocrinos"/>
+					        <field name="psicosocial"/>
+					    
+					        <separator string="Alergias"/>
+					        <newline/>
+					        <field name="alimentos"/>
+					        <field name="oloresfuertes"/>
+					        <field name="polvos"/>
+					    </group >
+
+					    
+					</page>
+					<page string="Antecedentes Laborales">
+					    <field name="empresaantigua"/>
+					    <field name="cargo"/>
+					    <field name="tiempoenempresa"/>
+					    <field name="implementosdeseguridad"/>
+					   
+					</page>
+					
+				
+        
+       
+				    </notebook>
+				    <!-- 		  Cerrar tercer Notebook   -->
+
+				</page>
+				<!-- 		  Äbrir segundo Notebook   -->
+			        <page string="Habitos">
+				  <!-- 		  Äbrir tercer Notebook   -->
+				    <field name="actividadfisica"/>
+				    <field name="tabaco"/>
+				    <field name="alcohol"/>
+				    <field name="cafe"/>
+				    <field name="micciones"/>
+				    <field name="intestinales"/>
+				    <field name="otroshabitos"/>
+				    
+				    
+				</page>
+				<page string="Examen Complementario (Sintomas)">
+				  <!-- 		  Äbrir tercer Notebook   -->
+				  
+				    <field name="dolordecabeza" />
+				    <field name="dificultadparaver"/>
+				    <field name="usodelentes"/>
+				    <field name="escuchar"/>
+				    <field name="asma"/>
+				    <field name="cansancio"/>
+				    <field name="opresion"/>
+				    <field name="hipertension"/>
+				    <field name="diarrea"/>
+				    <field name="problemasorinar"/>
+				    <field name="lesiongenital" />
+				    <field name="enfermedadsexual"/>
+				    <field name="insomnio"/>
+				    <field name="cambiodepeso"/>
+				    <field name="dolordeespalda"/>
+				    <field name="fracturas"/>
+				    <field name="lesionespiel"/>
+				    <field name="trabajaporturnos"/>
+				    <field name="usaequiposproteccion"/>
+				    <field name="accidentelaboral"/>
+				</page>
+				<page string="Examen Fisico">
+				  <!-- 		  Äbrir tercer Notebook   -->
+				    <field name="peso"/>
+				    <field name="talla"/>
+				    <field name="fc"/>
+				    <field name="pulso"/>
+				    <field name="fr"/>
+				    <field name="ta"/>
+				    <field name="piel"/>
+				    
+				</page>
+
+   
+     
+				
+				
+				
+				<page string="Diagnosticos">
+				  <!-- 		  Äbrir tercer Notebook   -->
+				    <field name="description" colspan="4"/>
+				    <newline />
+				    
+				</page>
+				
+			    </notebook>
+			    <!-- 		  cerrar segundo Notebook   -->
+
+			    
+			</page>
+                        <page string="Pre-Vacacional" >
+                            
+                        </page>
+			<page string="Post-Vacacional" >
+                            
+                        </page>
+			<page string="Post-Empleo" >
+                            
+                        </page>
+                    </notebook>
+		    <!-- 		  cerrar primer Notebook   -->
+
+                </form>
+          </field>
+    </record>
+    <record model="ir.ui.view" id="mi_modulo_mi_tabla_tree">
+        <field name="name">mi_modulo.mi_tabla.tree</field>
+        <field name="model">mi_modulo.mi_tabla</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Otras Cosas" colors="blue:state=='draft'">
+                <field name="active"/>
+                <field name="name"/>
+                <field name="quantity"/>
+                <field name="price"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="mi_modulo_mi_tabla_graph">
+        <field name="name">mi_modulo.mi_tabla.graph</field>
+        <field name="model">mi_modulo.mi_tabla</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+            <graph string="Cesar" type="bar" orientation="horizontal">
+                <field name="state"/>
+                <field name="quantity" operator="+"/>
+                <field name="price" operator="min"/>
+            </graph>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_mi_tabla_seq">
+        <field name="name">Historia Medica Del Paciente</field>
+        <field name="res_model">mi_modulo.mi_tabla</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,graph</field>
+    </record>
+    <menuitem id="menu_mi_modulo_module" name="Medicina Laboral"/>
+    <menuitem id="menu_mi_modulo_tables" name="Medicina Laboral" parent="menu_mi_modulo_module"/>
+    <menuitem id="menu_mi_modulo_mi_tabla" parent="menu_mi_modulo_tables" name="Historia Medica Del Paciente" action="action_mi_tabla_seq"/>
+
+    <!-- Tabla Relacionada -->
+    <record model="ir.ui.view" id="mi_modulo_mi_tabla_relacionada_form">
+        <field name="name">mi_modulo.mi_tabla_relacionada.form</field>
+            <field name="model">mi_modulo.mi_tabla_relacionada</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Otras Cosas">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="state"/>
+                    <group string="Objetos relacionados" colspan="4">
+                        <field name="related" nolabel="1"/>
+                    </group>
+                </form>
+          </field>
+    </record>
+    <record model="ir.ui.view" id="mi_modulo_mi_tabla_relacionada_tree">
+        <field name="name">mi_modulo.mi_tabla_relacionada.tree</field>
+        <field name="model">mi_modulo.mi_tabla_relacionada</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Otras Cosas" colors="blue:state=='draft'">
+                <field name="active"/>
+                <field name="name"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_mi_tabla_relacionada_seq">
+        <field name="name">Historia Medica Del Paciente2</field>
+        <field name="res_model">mi_modulo.mi_tabla_relacionada</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_mi_modulo_mi_tabla_relacionada" parent="menu_mi_modulo_tables" name="Historia Medica Del Paciente2" action="action_mi_tabla_relacionada_seq"/>
+
+    <!-- vista extendida de res.partner -->
+    <record model="ir.ui.view" id="mi_modulo_res_partner_form">
+        <field name="name">mi_modulo.res_partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                
+		<field name="name" position="after">
+                    <field name="comment" />
+                </field>
+		
+		
+               
+          </field>
+    </record>
+
+</data>
+</openerp>
